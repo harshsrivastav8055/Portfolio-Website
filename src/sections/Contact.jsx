@@ -19,20 +19,18 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: 'JavaScript Mastery',
-          from_email: form.email,
-          to_email: 'sujata@jsmastery.pro',
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
-      )
+    emailjs.send(
+      'service_syyyruj', // Service ID
+      'template_6i23j6b', // Template ID
+      {
+        from_name: form.name,
+        to_name: 'Harsh Srivastav',
+        from_email: form.email,
+        to_email: 'srivastavaharsh8055@gmail.com',
+        message: form.message,
+      },
+      '7REWbJBoDU66Enswl' // Public Key
+    )
       .then(
         () => {
           setLoading(false);
@@ -88,7 +86,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 className="field-input"
-                placeholder="ex., John Doe"
+                placeholder="ex., Harsh Srivastav"
               />
             </label>
 
@@ -101,7 +99,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 className="field-input"
-                placeholder="ex., johndoe@gmail.com"
+                placeholder="ex., srivastavaharsh8055@gmail.com"
               />
             </label>
 

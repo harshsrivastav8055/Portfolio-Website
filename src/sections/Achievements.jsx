@@ -1,9 +1,9 @@
 import { clientReviews } from '../constants/index.js';
 
-const Clients = () => {
+const Achievements = () => {
   return (
     <section className="c-space my-20">
-      <h3 className="head-text">Hear from My Clients</h3>
+      <h3 className="head-text">Achievements</h3>
 
       <div className="client-container">
         {clientReviews.map((item) => (
@@ -17,6 +17,7 @@ const Clients = () => {
                   <div className="flex flex-col">
                     <p className="font-semibold text-white-800">{item.name}</p>
                     <p className="text-white-500 md:text-base text-sm font-light">{item.position}</p>
+                    {/* <p className="text-white-500 md:text-base text-sm font-light">{item.url}</p> */}
                   </div>
                 </div>
 
@@ -34,4 +35,4 @@ const Clients = () => {
   );
 };
 
-export default Clients;
+export default Achievements;
